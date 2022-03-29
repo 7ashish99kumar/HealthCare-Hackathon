@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Immunity Center</title>
+  <link type="text/css" rel="stylesheet" href="css/immune.css">
+  <meta charset="utf-8" />
+  <!-- CSS stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Bootstrap for navigation bars -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- Google Font Formatting -->
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&family=Ubuntu:ital,wght@1,500&display=swap" rel="stylesheet">
+  <!--Font Awesome Icon -apple and playstore-->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<style>
+p {
+  font-size: 17px;
+  font-weight: 450;
+}
+
+h2,
+h4 {
+  color: #085E7D;
+  font-weight: bold;
+}
+
+.blog {
+  background-color: #E4F9F5;
+}
+
+li {
+  font-size: 20px;
+  font-weight: bold;
+  color: #085E7D;
+  margin: 0 0 0 2em;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 100px;
+  /*align-content: center;*/
+}
+</style>
+
+<body>
+  <section id="title" style="height: 200px;">
+    <div class="container-fluid" style="padding-right: 10%;padding-left: 15%;">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark" style="padding:0 0 0 0; "> <a class="navbar-brand" href="index.html" style="font-size:2.5rem; color:#085E7D;margin-right: 100px"><i class="fa fa-stethoscope" style="font-size: 55px"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"> <a class="nav-link" href="covidinfo.html" style="padding-left: 18px; padding-right: 18px; color:#085E7D">Covid-19 Updates</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="immunity.html" style="padding-left: 18px; padding-right: 18px; color:#085E7D">Increase Immunity</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="doctors.html" style="padding-left: 18px; padding-right: 18px; color:#085E7D">Find a Doctor</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="medicine.html" style="padding-left: 18px; padding-right: 18px;color:#085E7D">Know your Medicines</a> </li>
+            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#085E78">
+          Quick Enquiry
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: 300px;padding-left: 1rem; background-color: #35b6b4;">
+                <form action="#">
+                  <label for="fname" style="color: white;">Name</label>
+                  <br>
+                  <input type="text" id="name" name="Name">
+                  <br>
+                  <br>
+                  <label for="mobile" style="color: white;">Mobile Number</label>
+                  <br>
+                  <input type="tel" id="mob" name="mobile" pattern="[0-9]{10}">
+                  <br>
+                  <br>
+                  <label for="pref-time" style="color: white;">Preferred Time To Call</label>
+                  <br>
+                  <select id="time" name="time">
+                    <option value="t1">08:00 AM - 9:00 AM</option>
+                    <option value="t1">09:00 AM - 10:00 AM</option>
+                    <option value="t1">10:00 AM - 11:00 AM</option>
+                    <option value="t1">11:00 AM - 12:00 PM</option>
+                    <option value="t1">12:00 PM - 01:00 PM</option>
+                    <option value="t1">01:00 PM - 02:00 PM</option>
+                    <option value="t1">02:00 PM - 03:00 PM</option>
+                    <option value="t1">03:00 PM - 04:00 PM</option>
+                    <option value="t1">04:00 PM - 05:00 PM</option>
+                  </select>
+                  <br/>
+                  <br/>
+                  <input type="Submit" name="Submit" onclick="alert('Thank you ! Your response has been received.')" style="width: 90%; text-align: center;"> </form>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark" style="padding:0 30rem 4.5rem 0;">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown" style="padding-right: 40%;"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#3E8E7E">
+          Hospitals
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width:300px;background-color: #4FD3C4;">
+                <h5 style="padding-left: 1rem;color: white;">Our Hospital Partners</h5>
+                <div class="dropdown-divider"></div> <a class="dropdown-item" href="hospitals.html">Indraprastha Apollo Hospital</a> <a class="dropdown-item" href="hospitals.html">Medanta</a> <a class="dropdown-item" href="hospitals.html">Fortis Memorial Research Institute</a> <a class="dropdown-item" href="hospitals.html">MAX Super Speciality Hospitals</a> <a class="dropdown-item" href="hospitals.html">Jaypee Hospital, Noida</a>
+                <div class="dropdown-divider"></div> <a class="dropdown-item" href="hospitals.html" style="font-weight: bold;">Know In Detail</a> </div>
+            </li>
+            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#3E8E7E;">
+                Services
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: 650px; background-color: #35b6b4;color: white;">
+                <div class="megadropdown-container pt-lg-20 pb-lg-30" style="width: 500px;">
+                  <div class="row">
+                    <div class="col-lg-7 megadropdown-aux">
+                      <div class="row">
+                        <div class="col-6">
+                          <a class="d-flex align-items-start megadropdown-menu-link-o f-lg-18 color-gray-600 py-2 l-h-12 px-3" href="emergency.html" style="color: white;">
+                            <blink>Emergency</blink>
+                          </a>
+                        </div>
+                        <div class="col-6"><a class="d-flex align-items-start megadropdown-menu-link-o f-lg-18 color-gray-600 py-2 l-h-12 px-3" style="color: white;" href="http://maxlab.co.in/" target="_blank" rel="noopener"><span>Lab Tests</span></a> </div>
+                        <div class="col-6"><a class="d-flex align-items-start megadropdown-menu-link-o f-lg-18 color-gray-600 py-2 l-h-12 px-3" style="color: white;" href="/frequently-asked-questions"><span>Frequently Asked Questions</span></a> </div>
+                        <div class="col-6"><a class="d-flex align-items-start megadropdown-menu-link-o f-lg-18 color-gray-600 py-2 l-h-12 px-3" style="color: white;" href="http://maxathome.in/" target="_blank" rel="noopener"><span>Consult @ Home</span></a> </div>
+                        <div class="col-6"><a class="d-flex align-items-start megadropdown-menu-link-o f-lg-18 color-gray-600 py-2 l-h-12 px-3" style="color: white;" href="/immigration-services"><span>Immigration Services</span></a>
+                          <br> </div>
+                        <div class="col-6"><a class="d-flex align-items-start megadropdown-menu-link-o f-lg-18 color-gray-600 py-2 l-h-12 px-3" style="color: white;" href="/tpa-and-panel-information"><span>Insurance and TPA</span></a> </div>
+                        <div class="col-6">
+                          <br> </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-5 pl-lg-30 border-left megadropdown-aux">
+                      <div class="mb-lg-5">
+                        <div class="color-blue f-lg-22 mb-2 l-h-12 font-weight-semi-bold" style="padding-left:10px; background-color: #085E7D; width: 320px;">
+                          <h4 style="color: white; font-weight: 600">At Home Service</h4> </div>
+                        <p class="color-gray-600 f-lg-16 mb-3 l-h-12" style="width: 250px;"><a>Now get expert medical care in the comfort of your home with healthCare@Home services.</a> </p>
+                        <button> <a class="btn-with-icon meet-doctor-section-btn f-lg-20 h-50p btn-with-icon-sm" href="http://maxathome.in/" target="_blank" rel="noopener">Book a Test</a></button>
+                      </div>
+                      <div>
+                        <div class="color-blue f-lg-22 mb-2 l-h-12 font-weight-semi-bold" style="padding-left:10px; background-color: #085E7D; width: 320px;">
+                          <h4 style="color: white;font-weight: 600">Book a Health Checkup</h4></div>
+                        <p class="color-gray-600 f-lg-16 mb-3 l-h-12" style="width: 300px;">Preventive health checkups can provide you with an early diagnosis of medical conditions, giving your treatment a headstart.</p>
+                        <button class="btn-with-icon-sm btn-with-icon meet-doctor-section-btn f-lg-20 h-50p" href="/preventive-health-plans">Book Now </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
+  <section class="blog" style="height: 3000px;">
+    <table>
+      <tr>
+        <td style="width: 5%"> </td>
+        <td style="width: 75%">
+          <div class="human-immune" style="width: 90%; padding-left: 1rem; padding-top: 2rem;">
+            <h2>Ways to Boost Your Immune System</h2>
+            <br/>
+            <p>There are plenty of supplements and products that claim to help improve immunity. But boosting your immune system is a bit harder to accomplish than you may think — and for good reason.</p>
+            <p>Your immune system is incredibly complex. From a cold to the flu to COVID-19, it has to be strong enough and sophisticated enough to fight off a variety of illnesses and infections, but not so strong that it overreacts unnecessarily — causing autoimmune disorders to develop. To operate in such a delicate balance, it's tightly controlled by a variety of inputs.</p>
+            <p>Despite this complexity, there are things you can do to help give your immune system what it needs to ward off infection or illness.</p>
+            <p><b>Here are five science-backed ways to build and maintain a strong, healthy immune system, as well as why you shouldn't rely on supplements instead.</b></p>
+            <br/>
+            <ol>
+              <li><span><h4>Stay up-to-date on recommended vaccines</h4></span></li>
+              <p>Building a strong immune system starts with taking advantage of the best way we have to protect ourselves from harmful illnesses: vaccines.</p>
+              <p>Your immune system is smart, but vaccines train it to be even smarter — helping it learn how to recognize and fight off certain disease-causing illnesses. It's much safer for your immune system to learn via vaccination than through infection with these harmful germs.</p>
+              <p>It's always important to be up-to-date on recommended vaccinations, especially your COVID-19 vaccine or booster as well as your annual flu shot.</p>
+              <br/>
+              <li><span><h4>Maintain a healthy diet</h4></span></li>
+              <p>As with most things in your body, a healthy diet is key to a strong immune system. This means making sure you eat plenty of vegetables, fruits, legumes, whole grains, lean protein and healthy fats.</p>
+              <p>In addition to providing your immune system the energy it needs, a healthy diet can help ensure you're getting sufficient amounts of the micronutrients that play a role in maintaining your immune system, including:</p>
+              <ul>
+                <li style="list-style: circle;font-weight: 400;color: black;font-size: 17px;">Vitamin B6, found in chicken, salmon, tuna, bananas, green vegetables and potatoes (with the skin)</li>
+                <li style="list-style: circle;font-weight: 400;color: black;font-size: 17px;">Vitamin C, found in citrus fruit, including oranges and strawberries, as well as tomatoes, broccoli and spinach</li>
+                <li style="list-style: circle;font-weight: 400;color: black;font-size: 17px;">Vitamin E, found in almonds, sunflower and safflower oil, sunflower seeds, peanut butter and spinach</li>
+              </ul>
+              <br/>
+              <p>Since experts believe that your body absorbs vitamins more efficiently from dietary sources, rather than supplements, the best way to support your immune system is to eat a well-balanced diet.</p>
+              <br/>
+              <li><span><h4>Exercise regularly</h4></span></li>
+              <p>Physical activity isn't just for building muscles and helping yourself de-stress — it's also an important part of being healthy and supporting a healthy immune system.</p>
+              <p>One way exercise may improve immune function is by boosting your overall circulation, making it easier for immune cells and other infection-fighting molecules to travel more easily throughout your body.</p>
+              <p>In fact, studies have shown that engaging in as little as 30 minutes of moderate-to-vigorous exercise every day helps stimulate your immune system. This means it's important to focus on staying active and getting regular exercise.</p>
+              <br/>
+              <li><span><h4>Hydrate, hydrate, hydrate</h4></span></li>
+              <p>Water plays many important roles in your body, including supporting your immune system.</p>
+              <p>A fluid in your circulatory system called lymph, which carries important infection-fighting immune cells around your body, is largely made up of water. Being dehydrated slows down the movement of lymph, sometimes leading to an impaired immune system.</p>
+              <p>Even if you're not exercising or sweating, you're constantly losing water through your breath, as well as through your urine and bowel movements. To help support your immune system, be sure you're replacing the water you lose with water you can use — which starts with knowing what your daily water intake should be. </p>
+              <br/>
+              <li><span><h4>Get plenty of sleep</h4></span></li>
+              <p>Sleep certainly doesn't feel like an active process, but there are plenty of important things happening in your body when you're not awake. For instance, important infection-fighting molecules are created while you sleep.</p>
+              <p>Studies have shown that people who don't get enough quality sleep are more prone to getting sick after exposure to viruses, such as those that cause the common cold.</p>
+              <p>To give your immune system the best chance to fight off infection and illness, it's important to know how much sleep you should be getting every night, as well as the steps to take if your sleep is suffering.</p>
+              <br/>
+              <li><span><h4>Minimize stress</h4></span></li>
+              <p>Whether it comes on quick or builds over time, it's important to understand how stress affects your health — including the impact it has on your immune system.</p>
+              <p>During a period of stress, particularly chronic stress that's frequent and long-lasting, your body responds by initiating what's called a stress response. It's meant to help you handle the stressful situations coming your way. Unfortunately, this response also suppresses your immune system — increasing your chance of infection or illness.</p>
+              <p>Stress is different for everyone, and how we relieve it is, too. Given the effect it can have on your health, it's important to know how to identify stress. And, whether it's deep breathing, mediation, prayer or exercise, you should also get familiar with the activities that help you reduce stress.</p>
+              <br/> </ol>
+            <section class="info">
+              <div class="card-grid-space">
+                <a class="card" href="https://www.health.harvard.edu/staying-healthy/how-to-boost-your-immune-system" style="--bg-img: url('https://codetheweb.blog/assets/img/posts/links-images-about-file-paths/cover.jpg')" target="_blank">
+                  <div>
+                    <h1>KNOW MORE</h1>
+                    <p>
+                      <ul>
+                        <li>Helpful ways to fight off diseases and strengthen immunity.</li>
+                        <li>Immunity and Age.</li>
+                        <li>Research and development by HARVARD</li>
+                      </ul>
+                    </p>
+                    <div class="tags">
+                      <div class="tag">Harvard</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </section>
+          </div>
+        </td>
+        <td style="width: 20%">
+          <table>
+            <tr>
+              <td> <img src="images/immune-system.webp" style="width: 400px; height:450px"> </td>
+            </tr>
+            <tr>
+              <td> <img src="images/immune1.jpg" style="width: 400px; height:450px"> </td>
+            </tr>
+            <tr>
+              <td> <img src="images/immune2.webp" style="width: 400px; height:450px"> </td>
+            </tr>
+            <tr>
+              <td> <img src="images/immune3.jpg" style="width: 400px; height:450px"> </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </section>
+  <!-- Footer -->
+  <footer id="footer">
+    <div class=foot-icons> <i class="fab fa-twitter footji"></i> <i class="fab fa-facebook-f footji"></i> <i class="fab fa-instagram footji"></i> <i class="fas fa-envelope footji"></i>
+      <p>© Copyright 2022 HPE CodeWars Hackathon</p>
+    </div>
+  </footer>
+</body>
+
+</html>

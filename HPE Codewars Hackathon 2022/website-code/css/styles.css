@@ -1,0 +1,214 @@
+body{
+	font-family: "Montserrat";
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: "Montserrat",sans-serif;
+}
+
+h2{
+	font-size: 3rem;
+	line-height: 1.5;
+	font-weight: 900;
+}
+
+.dropdown-menu{
+	width: 500px;
+	text-align: center;
+}
+
+.col-lg-7 {
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+}
+
+/*Heading*/
+
+.big-heading{
+	font-size: 3.5rem;
+	line-height: 1.5;
+	font-weight: 900;
+}
+
+#title{
+	background-color: #E4F9F5;
+	color: #66BFBF;
+}
+
+#testimonials{
+	text-align: center;
+	padding: 7% 15%;
+	background-color: #E4F9F5;
+	color: #3E8E7E;
+}
+
+.t-image{
+	width: 20%;
+	border-radius: 100%;
+	margin: 10%;
+}
+
+#press{
+	text-align: center;
+	background-color: #E4F9F5;
+	padding-bottom: 3%;
+}
+
+.p-image{
+	width:150px;
+	height:150px;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 20px;
+}
+
+.container-fluid{
+	padding: 3% 15% 15%;
+}
+
+#pricing{
+	padding: 100px;
+	text-align: center;
+}
+
+.price-col{
+	padding: 3% 2%;
+}
+
+.ending{
+	text-align: center;
+	background-color: #E4F9F5;
+	color: #66BFBF;
+	padding:7% 15%;
+}
+
+.ending h3{
+	color: white;
+	width: 65%;
+	margin: auto;
+}
+
+#footer{
+	padding: 5% 15%;
+}
+
+/*Navigation Bar*/
+
+
+.navbar-brand{
+	font-style: normal;
+	font-family: "Ubuntu";
+	font-weight: bold;
+}
+
+.nav-link{
+	font-size: 1.2rem;
+	font-family: "Montserrat";
+	font-weight: lighter;
+}
+
+.download-bt{
+	margin: 5% 3% 5% 0;
+}
+
+/*Title Image*/
+.title-image{
+width: 60%;
+/*transform: rotate(15deg);*/
+position: absolute;
+right: 18%;
+}
+
+
+
+#features{
+	text-align: center;
+	padding: 7% 15% 7% 15%;
+	
+	position: relative;
+	background-color: #fff;
+}
+
+.tb{
+	margin:50px auto 50px auto;
+}
+
+.fa-check-circle{
+	color: #ef8172;
+	margin-bottom: 1rem; 
+}
+
+.nav-link:hover{
+	color:#008E89;
+	font-weight: bold;
+}
+
+.fa-check-circle:hover{
+	color: #ff4c68;
+}
+
+.fa-bullseye{
+	color: #ef8172;
+	margin-bottom: 1rem; 
+}
+
+.fa-bullseye:hover{
+	color: #ff4c68;
+}
+
+.fa-heart{
+	color: #ef8172;
+	margin-bottom: 1rem; 
+}
+
+.fa-heart:hover{
+	color: #ff4c68;
+}
+
+.foot-icons{
+text-align: center;	
+padding: 3% 0 3%;
+line-height: 3;
+background-color: #fff;
+}
+
+.footji{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
+
+.cf{
+	color: #8f8f8f;
+	width: 70%;
+	margin:auto;
+
+@media (max-width: 200px)
+{
+	.title-image{
+		position: static;
+		transform: rotate(0);
+	}
+}
+
+
+.img-responsive{
+	display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.doctor-table{
+padding: 0 10rem 0 40rem;
+padding-left:100px;
+}
+
+.human-immune{
+	background-color: #E4F9F5;
+}
+
+

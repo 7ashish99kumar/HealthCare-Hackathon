@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Medicinal Info</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&family=Ubuntu:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <!--Font Awesome Icon -apple and playstore-->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<style type="text/css">
+.hero-image {
+  background-image: url("images/doc2.jpg");
+  background-color: #cccccc;
+  height: 1500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+.myc-visuallyhidden {
+  display: none;
+}
+
+
+td{
+  padding-left: 15px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 35px;
+  /*align-content: center;*/
+}
+</style>
+
+<body>
+  <section id="title" style="height: 200px;">
+    <div class="container-fluid" style="padding-right: 10%;padding-left: 15%;">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark" style="padding:0 0 0 0; "> <a class="navbar-brand" href="index.html" style="font-size:2.5rem; color:#085E7D;margin-right: 100px"><i class="fa fa-stethoscope" style="font-size: 55px"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"> <a class="nav-link" href="covidinfo.html" style="padding-left: 18px; padding-right: 18px; color:#085E7D">Covid-19 Updates</a>
+            </li>
+            <li class="nav-item"> <a class="nav-link" href="immunity.html" style="padding-left: 18px; padding-right: 18px; color:#085E7D">Increase Immunity</a>
+            </li>
+            <li class="nav-item"> <a class="nav-link" href="doctors.html" style="padding-left: 18px; padding-right: 18px; color:#085E7D">Find a Doctor</a>
+            </li>
+            <li class="nav-item"> <a class="nav-link" href="medicine.html" style="padding-left: 18px; padding-right: 18px;color:#085E7D">Know your Medicines</a>
+            </li>
+
+            <li class="nav-item dropdown"> 
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#085E78">
+          Quick Enquiry
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: 300px;padding-left: 1rem; background-color: #35b6b4;">
+                <form action="#">
+                <label for="fname" style="color: white;">Name</label><br>
+                <input type="text" id="name" name="Name"><br><br>
+                <label for="mobile" style="color: white;">Mobile Number</label><br>
+                <input type="tel" id="mob" name="mobile" pattern="[0-9]{10}"><br><br>
+                <label for="pref-time" style="color: white;">Preferred Time To Call</label><br>
+                <select id="time" name="time">
+                  <option value="t1">08:00 AM - 9:00 AM</option>
+                  <option value="t1">09:00 AM - 10:00 AM</option>
+                  <option value="t1">10:00 AM - 11:00 AM</option>
+                  <option value="t1">11:00 AM - 12:00 PM</option>
+                  <option value="t1">12:00 PM - 01:00 PM</option>
+                  <option value="t1">01:00 PM - 02:00 PM</option>
+                  <option value="t1">02:00 PM - 03:00 PM</option>
+                  <option value="t1">03:00 PM - 04:00 PM</option>
+                  <option value="t1">04:00 PM - 05:00 PM</option>
+                </select>
+                <br/><br/>
+                <input type="Submit" name="Submit" onclick="alert('Thank you ! Your response has been received.')" style="width: 90%; text-align: center;">
+                </form>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark" style="padding:0 30rem 4.5rem 0;">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown" style="padding-right: 40%;"> 
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#3E8E7E" >
+          Hospitals
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width:300px;background-color: #4FD3C4;">
+                <h5 style="padding-left: 1rem;color: white;">Our Hospital Partners</h5>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="hospitals.html">Indraprastha Apollo Hospital</a>
+                <a class="dropdown-item" href="hospitals.html">Medanta</a>
+                <a class="dropdown-item" href="hospitals.html">Fortis Memorial Research Institute</a>
+                <a class="dropdown-item" href="hospitals.html">MAX Super Speciality Hospitals</a>
+                <a class="dropdown-item" href="hospitals.html">Jaypee Hospital, Noida</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="hospitals.html" style="font-weight: bold;">Know In Detail</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown"> 
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#3E8E7E;">
+                Services
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: 650px; background-color: #35b6b4;color: white;">
+                <div class="megadropdown-container pt-lg-20 pb-lg-30" style="width: 500px;">
+                <div class="row">
+                <div class="col-lg-7 megadropdown-aux">
+                  <div class="row">
+                    <div class="col-6"><a class="d-flex align-items-start megadropdown-menu-link-o f-lg-18 color-gray-600 py-2 l-h-12 px-3" href="emergency.html" style="color: white;"><span>Emergency</span></a>
+                    </div>
+                    <div class="col-6"><a class="d-flex align-items-start megadropdown-menu-link-o f-lg-18 color-gray-600 py-2 l-h-12 px-3" style="color: white;" href="http://maxlab.co.in/" target="_blank" rel="noopener"><span>Lab Tests</span></a>
+                    </div>
+                    <div class="col-6"><a class="d-flex align-items-start megadropdown-menu-link-o f-lg-18 color-gray-600 py-2 l-h-12 px-3"  style="color: white;"href="/frequently-asked-questions"><span>Frequently Asked Questions</span></a>
+                    </div>
+                    <div class="col-6"><a class="d-flex align-items-start megadropdown-menu-link-o f-lg-18 color-gray-600 py-2 l-h-12 px-3" style="color: white;"href="http://maxathome.in/" target="_blank" rel="noopener"><span>Consult @ Home</span></a>
+                    </div>
+                    <div class="col-6"><a class="d-flex align-items-start megadropdown-menu-link-o f-lg-18 color-gray-600 py-2 l-h-12 px-3" style="color: white;"href="/immigration-services"><span>Immigration Services</span></a>
+                      <br>
+                    </div>
+                    <div class="col-6"><a class="d-flex align-items-start megadropdown-menu-link-o f-lg-18 color-gray-600 py-2 l-h-12 px-3"style="color: white;" href="/tpa-and-panel-information"><span>Insurance and TPA</span></a>
+                    </div>
+                    <!--
+                     <div class="col-6"><a class="d-flex align-items-start megadropdown-menu-link-o f-lg-18 color-gray-600 py-2 l-h-12 px-3" href="#"><img class="lazy w-25p h-22 mr-2 flex-shrink-0" data-src="/img/Wards&amp;Rooms.svg" /> <span>Wards &amp; Rooms</span></a></div>-->
+                    <div class="col-6">
+                      <br>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-5 pl-lg-30 border-left megadropdown-aux">
+                  <div class="mb-lg-5">
+                    <div class="color-blue f-lg-22 mb-2 l-h-12 font-weight-semi-bold" style="padding-left:10px; background-color: #085E7D; width: 320px;font-weight: 800"><h4>At Home Service</h4>
+                    </div>
+                    <p class="color-gray-600 f-lg-16 mb-3 l-h-12" style="width: 250px;"><a>Now get expert medical care in the comfort of your home with healthCare@Home services.</a>
+                    </p>
+                    <button>
+<a class="btn-with-icon meet-doctor-section-btn f-lg-20 h-50p btn-with-icon-sm" href="http://maxathome.in/" target="_blank" rel="noopener">Book a Test</a></button>
+                  </div>
+                  <div>
+                    <div class="color-blue f-lg-22 mb-2 l-h-12 font-weight-semi-bold" style="padding-left:10px; background-color: #085E7D; width: 320px; font-weight: 800"><h4>Book a Health Checkup</h4></div>
+                    <p class="color-gray-600 f-lg-16 mb-3 l-h-12" style="width: 300px;">Preventive health checkups can provide you with an early diagnosis of medical conditions, giving your treatment a headstart.</p>
+<button class="btn-with-icon-sm btn-with-icon meet-doctor-section-btn f-lg-20 h-50p" href="/preventive-health-plans">Book Now </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+
+<!-- Medicinal Info -->
+  <section class="medicine-info" style="position: fixed;top:200px;right: 0;display: block; background-color: #F7E2E2;padding-left: 10px;">
+    <table style="width:75%;">
+        <tr>
+        <th style="text-align: center;">Narrow your search</th>
+        </tr>
+        <tr>
+          <td><a href="#"></a></td>
+          <td><a href="#desc-A">A</a></td>
+          <td><a href="#desc-B">B</a></td>
+          <td><a href="#desc-C">C</a></td>
+          <td><a href="#desc-D">D</a></td>
+          <td><a href="#desc-E">E</a></td>
+          <td><a href="#desc-F">F</a></td>
+          <td><a href="#desc-G">G</a></td>
+          <td><a href="#desc-H">H</a></td>
+          <td><a href="#desc-I">I</a></td>
+          <td><a href="#desc-J">J</a></td>
+          <td><a href="#desc-K">K</a></td>
+          <td><a href="#desc-L">L</a></td>
+          <td><a href="#desc-M">M</a></td>
+        </tr>
+        <tr>
+          <td><a href="#"></a></td>
+          <td><a href="#desc-N">N</a></td>
+          <td><a href="#desc-O">O</a></td>
+          <td><a href="#desc-P">P</a></td>
+          <td><a href="#desc-Q">Q</a></td>
+          <td><a href="#desc-R">R</a></td>
+          <td><a href="#desc-S">S</a></td>
+          <td><a href="#desc-T">T</a></td>
+          <td><a href="#desc-U">U</a></td>
+          <td><a href="#desc-V">V</a></td>
+          <td><a href="#desc-W">W</a></td>
+          <td><a href="#desc-X">X</a></td>
+          <td><a href="#desc-Y">Y</a></td>
+          <td><a href="#desc-Z">Z</a></td>
+        </tr>
+      </table>
+    </section>
+
+      <section style="background-color: #C3E5AE; height:7300px;">
+      <div id="desc-A" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">A</h3>
+        <ol>
+            <li>
+                <span aria-hidden="true" class="inline-link">A/B Otic –</span> <a href="https://www.mayoclinic.org/drugs-supplements/antipyrine-and-benzocaine-otic-route/description/drg-20061442" target="_blank">Antipyrine And Benzocaine (Otic Route)</a>
+            </li>
+            <li>
+                <span aria-hidden="true" class="inline-link">A/B Otic –</span> <a href="/drugs-supplements/antipyrine-and-benzocaine-otic-route/description/drg-20061442">Antipyrine And Benzocaine (Otic Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">A/T/S –</span> <a href="/drugs-supplements/erythromycin-topical-route/description/drg-20068690">Erythromycin (Topical Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">A200 Maximum Strength –</span> <a href="/drugs-supplements/pyrethrum-extract-and-piperonyl-butoxide-topical-route/description/drg-20068537">Pyrethrum Extract And Piperonyl Butoxide</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">A200 Time-Tested Formula –</span> <a href="/drugs-supplements/pyrethrum-extract-and-piperonyl-butoxide-topical-route/description/drg-20068537">Pyrethrum Extract And Piperonyl Butoxide </a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">A-3 Revised –</span> <a href="/drugs-supplements/laxative-oral-route/description/drg-20070683">Laxative (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                    <a href="/drugs-supplements/abacavir-oral-route/description/drg-20061463">Abacavir (Oral Route)</a>
+            </li>
+        
+            <li>
+                    <a href="/drugs-supplements/abacavir-and-lamivudine-oral-route/description/drg-20062798">Abacavir And Lamivudine (Oral Route)</a>
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/abacavir-dolutegravir-and-lamivudine-oral-route/description/drg-20122502">Abacavir, Dolutegravir, And Lamivudine (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/abacavir-lamivudine-and-zidovudine-oral-route/description/drg-20061449">Abacavir, Lamivudine, And Zidovudine (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/abaloparatide-subcutaneous-route/description/drg-20406221">Abaloparatide (Subcutaneous Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/abatacept-intravenous-route-subcutaneous-route/description/drg-20070783">Abatacept (Intravenous Route, Subcutaneous Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Abbokinase –</span> <a href="/drugs-supplements/urokinase-intravenous-route/description/drg-20070827">Urokinase (Intravenous Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/abciximab-intravenous-route/description/drg-20061512">Abciximab (Intravenous Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Abecma –</span> <a href="/drugs-supplements/idecabtagene-vicleucel-intravenous-route/description/drg-20512967">Idecabtagene Vicleucel (Intravenous Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Abelcet –</span> <a href="/drugs-supplements/amphotericin-b-lipid-complex-intravenous-route-injection-route/description/drg-20061816">Amphotericin B Lipid Complex (Intravenous Route, Injection Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Abenol –</span> <a href="/drugs-supplements/acetaminophen-oral-route-rectal-route/description/drg-20068480">Acetaminophen (Oral Route, Rectal Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Abilify –</span> <a href="/drugs-supplements/aripiprazole-intramuscular-route/description/drg-20069716">Aripiprazole (Intramuscular Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Abilify –</span> <a href="/drugs-supplements/aripiprazole-oral-route/description/drg-20066890">Aripiprazole (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Abilify Discmelt –</span> <a href="/drugs-supplements/aripiprazole-oral-route/description/drg-20066890">Aripiprazole (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Abilify Maintena –</span> <a href="/drugs-supplements/aripiprazole-intramuscular-route/description/drg-20069716">Aripiprazole (Intramuscular Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/abiraterone-oral-route/description/drg-20074889">Abiraterone (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Ablavar –</span> <a href="/drugs-supplements/gadofosveset-injection-route/description/drg-20073367">Gadofosveset (Injection Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/abobotulinumtoxina-intramuscular-route/description/drg-20073026">Abobotulinumtoxina (Intramuscular Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Abraxane –</span> <a href="/drugs-supplements/paclitaxel-protein-bound-intravenous-route/description/drg-20067529">Paclitaxel Protein-Bound (Intravenous Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Abreva –</span> <a href="/drugs-supplements/docosanol-topical-route/description/drg-20063494">Docosanol (Topical Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">ABRILADA –</span> <a href="/drugs-supplements/adalimumab-subcutaneous-route/description/drg-20066817">Adalimumab (Subcutaneous Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/abrocitinib-oral-route/description/drg-20529411">Abrocitinib (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Absorbine Jr. Antifungal –</span> <a href="/drugs-supplements/tolnaftate-topical-route/description/drg-20068886">Tolnaftate (Topical Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Absorica –</span> <a href="/drugs-supplements/isotretinoin-oral-route/description/drg-20068178">Isotretinoin (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Abstral –</span> <a href="/drugs-supplements/fentanyl-buccal-mucosa-route-oromucosal-route-sublingual-route/description/drg-20063888">Fentanyl (Buccal Mucosa Route, Oromucosal Route, Sublingual Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/acamprosate-oral-route/description/drg-20066802">Acamprosate (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/acarbose-oral-route/description/drg-20067949">Acarbose (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">A-Caro-25 –</span> <a href="/drugs-supplements/beta-carotene-oral-route/description/drg-20066795">Beta Carotene (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acb –</span> <a href="/drugs-supplements/cholecystographic-agent-oral-route/description/drg-20070691">Cholecystographic Agent (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acb –</span> <a href="/drugs-supplements/barium-sulfate-oral-route/description/drg-20062255"><span class="myc-visuallyhidden">Acb, also known as</span>Barium Sulfate (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Accolate –</span> <a href="/drugs-supplements/zafirlukast-oral-route/description/drg-20066745">Zafirlukast (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Accretropin –</span> <a href="/drugs-supplements/somatropin-e-coli-derived-subcutaneous-route-injection-route/description/drg-20071575">Somatropin, E-Coli Derived (Subcutaneous Route, Injection Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Accuneb –</span> <a href="/drugs-supplements/albuterol-inhalation-route/description/drg-20073536">Albuterol (Inhalation Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Accupril –</span> <a href="/drugs-supplements/quinapril-oral-route/description/drg-20069256">Quinapril (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Accutane –</span> <a href="/drugs-supplements/isotretinoin-oral-route/description/drg-20068178">Isotretinoin (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/acebutolol-oral-route/description/drg-20070999">Acebutolol (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Aceon –</span> <a href="/drugs-supplements/perindopril-oral-route/description/drg-20069270">Perindopril (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acephen –</span> <a href="/drugs-supplements/acetaminophen-oral-route-rectal-route/description/drg-20068480">Acetaminophen (Oral Route, Rectal Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acetaminophen –</span> <a href="/drugs-supplements/acetaminophen-oral-route-rectal-route/description/drg-20068480">Acetaminophen (Oral Route, Rectal Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/acetaminophen-intravenous-route/description/drg-20074646">Acetaminophen (Intravenous Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/acetaminophen-oral-route-rectal-route/description/drg-20068480">Acetaminophen (Oral Route, Rectal Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/acetaminophen-and-codeine-oral-route/description/drg-20074117">Acetaminophen And Codeine (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/acetaminophen-caffeine-and-dihydrocodeine-oral-route/description/drg-20406132">Acetaminophen, Caffeine, And Dihydrocodeine (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acetasol HC –</span> <a href="/drugs-supplements/hydrocortisone-and-acetic-acid-otic-route/description/drg-20061688">Hydrocortisone And Acetic Acid (Otic Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/acetone-isopropyl-alcohol-and-polysorbate-topical-route/description/drg-20061424">Acetone, Isopropyl Alcohol, And Polysorbate (Topical Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acetoxyl 10 –</span> <a href="/drugs-supplements/benzoyl-peroxide-topical-route/description/drg-20062425">Benzoyl Peroxide (Topical Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acetoxyl 2.5 –</span> <a href="/drugs-supplements/benzoyl-peroxide-topical-route/description/drg-20062425">Benzoyl Peroxide (Topical Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acetoxyl 20 –</span> <a href="/drugs-supplements/benzoyl-peroxide-topical-route/description/drg-20062425">Benzoyl Peroxide (Topical Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acetoxyl 5 –</span> <a href="/drugs-supplements/benzoyl-peroxide-topical-route/description/drg-20062425">Benzoyl Peroxide (Topical Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/acetylcysteine-inhalation-route/description/drg-20061456">Acetylcysteine (Inhalation Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acilac –</span> <a href="/drugs-supplements/laxative-oral-route/description/drg-20070683">Laxative (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acilac –</span> <a href="/drugs-supplements/lactulose-oral-route/description/drg-20528356"><span class="myc-visuallyhidden">Acilac, also known as</span>Lactulose (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Aciphex –</span> <a href="/drugs-supplements/rabeprazole-oral-route/description/drg-20066981"><span class="myc-visuallyhidden">Aciphex, also known as</span>Rabeprazole (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Aciphex Sprinkle –</span> <a href="/drugs-supplements/rabeprazole-oral-route/description/drg-20066981"><span class="myc-visuallyhidden">Aciphex Sprinkle, also known as</span>Rabeprazole (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/acitretin-oral-route/description/drg-20061491">Acitretin (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/aclidinium-inhalation-route/description/drg-20075736">Aclidinium (Inhalation Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/aclidinium-and-formoterol-inhalation-route/description/drg-20461317">Aclidinium And Formoterol (Inhalation Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acne –</span> <a href="/drugs-supplements/benzoyl-peroxide-topical-route/description/drg-20062425"><span class="myc-visuallyhidden">Acne, also known as</span>Benzoyl Peroxide (Topical Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acne 10 Gel –</span> <a href="/drugs-supplements/benzoyl-peroxide-topical-route/description/drg-20062425"><span class="myc-visuallyhidden">Acne 10 Gel, also known as</span>Benzoyl Peroxide (Topical Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acne Wash –</span> <a href="/drugs-supplements/benzoyl-peroxide-topical-route/description/drg-20062425"><span class="myc-visuallyhidden">Acne Wash, also known as</span>Benzoyl Peroxide (Topical Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acne-Aid Gel –</span> <a href="/drugs-supplements/resorcinol-and-sulfur-topical-route/description/drg-20062617"><span class="myc-visuallyhidden">Acne-Aid Gel, also known as</span>Resorcinol And Sulfur (Topical Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acnex –</span> <a href="/drugs-supplements/salicylic-acid-topical-route/description/drg-20066030"><span class="myc-visuallyhidden">Acnex, also known as</span>Salicylic Acid (Topical Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acnomel Acne Mask –</span> <a href="/drugs-supplements/salicylic-acid-topical-route/description/drg-20066030"><span class="myc-visuallyhidden">Acnomel Acne Mask, also known as</span>Salicylic Acid (Topical Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acnomel Bp 5 –</span> <a href="/drugs-supplements/benzoyl-peroxide-topical-route/description/drg-20062425"><span class="myc-visuallyhidden">Acnomel Bp 5, also known as</span>Benzoyl Peroxide (Topical Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acnomel Skin Tone –</span> <a href="/drugs-supplements/resorcinol-and-sulfur-topical-route/description/drg-20062617"><span class="myc-visuallyhidden">Acnomel Skin Tone, also known as</span>Resorcinol And Sulfur (Topical Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acnomel Vanishing –</span> <a href="/drugs-supplements/resorcinol-and-sulfur-topical-route/description/drg-20062617"><span class="myc-visuallyhidden">Acnomel Vanishing, also known as</span>Resorcinol And Sulfur (Topical Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Actamin Maximum Strength –</span> <a href="/drugs-supplements/decongestant-and-analgesic-combinations-oral-route/description/drg-20070131">Decongestant And Analgesic Combinations (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Actamin Maximum Strength –</span> <a href="/drugs-supplements/acetaminophen-oral-route-rectal-route/description/drg-20068480">Acetaminophen (Oral Route, Rectal Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Actemra –</span> <a href="/drugs-supplements/tocilizumab-intravenous-route-subcutaneous-route/description/drg-20073821">Tocilizumab (Intravenous Route, Subcutaneous Route)</a>
+                
+            </li>
+             <li>
+                <span aria-hidden="true" class="inline-link">ActHIB –</span> <a href="/drugs-supplements/haemophilus-b-conjugate-vaccine-intramuscular-route/description/drg-20069853">Haemophilus B Conjugate Vaccine (Intramuscular Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acticin –</span> <a href="/drugs-supplements/permethrin-topical-route/description/drg-20065448">Permethrin (Topical Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Actidose-Aqua –</span> <a href="/drugs-supplements/charcoal-activated-oral-route/description/drg-20070087"><span class="myc-visuallyhidden">Actidose-Aqua, also known as</span>Charcoal, Activated (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Actifed Sinus Regular –</span> <a href="/drugs-supplements/decongestant-and-analgesic-combinations-oral-route/description/drg-20070131"><span class="myc-visuallyhidden">Actifed Sinus Regular, also known as</span>Decongestant And Analgesic Combinations (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Actifed Sinus Regular –</span> <a href="/drugs-supplements/cough-and-cold-combinations-oral-route/description/drg-20061164"><span class="myc-visuallyhidden">Actifed Sinus Regular, also known as</span>Cough And Cold Combinations (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Actigall –</span> <a href="/drugs-supplements/ursodiol-oral-route/description/drg-20066618"><span class="myc-visuallyhidden">Actigall, also known as</span>Ursodiol (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Actimmune –</span> <a href="/drugs-supplements/interferon-gamma-1b-injection-route-subcutaneous-route/description/drg-20064341"><span class="myc-visuallyhidden">Actimmune, also known as</span>Interferon Gamma-1b (Injection Route, Subcutaneous Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Actimol Children's –</span> <a href="/drugs-supplements/acetaminophen-oral-route-rectal-route/description/drg-20068480"><span class="myc-visuallyhidden">Actimol Children's, also known as</span>Acetaminophen (Oral Route, Rectal Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Actimol Infant –</span> <a href="/drugs-supplements/acetaminophen-oral-route-rectal-route/description/drg-20068480"><span class="myc-visuallyhidden">Actimol Infant, also known as</span>Acetaminophen (Oral Route, Rectal Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Actiprofen –</span> <a href="/drugs-supplements/ibuprofen-oral-route/description/drg-20070602"><span class="myc-visuallyhidden">Actiprofen, also known as</span>Ibuprofen (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Actiq –</span> <a href="/drugs-supplements/fentanyl-buccal-mucosa-route-oromucosal-route-sublingual-route/description/drg-20063888"><span class="myc-visuallyhidden">Actiq, also known as</span>Fentanyl (Buccal Mucosa Route, Oromucosal Route, Sublingual Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Actisite –</span> <a href="/drugs-supplements/tetracycline-mucous-membrane-oral-route/description/drg-20066322"><span class="myc-visuallyhidden">Actisite, also known as</span>Tetracycline (Mucous Membrane, Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Activase –</span> <a href="/drugs-supplements/alteplase-recombinant-intravenous-route/description/drg-20070819"><span class="myc-visuallyhidden">Activase, also known as</span>Alteplase, Recombinant (Intravenous Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Activella –</span> <a href="/drugs-supplements/estrogen-and-progestin-combination-ovarian-hormone-therapy-oral-route/description/drg-20070172"><span class="myc-visuallyhidden">Activella, also known as</span>Estrogen And Progestin Combination (Ovarian Hormone Therapy) (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Activella –</span> <a href="/drugs-supplements/estradiol-and-norethindrone-oral-route/description/drg-20095129"><span class="myc-visuallyhidden">Activella, also known as</span>Estradiol And Norethindrone (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Actonel –</span> <a href="/drugs-supplements/risedronate-oral-route/description/drg-20067115"><span class="myc-visuallyhidden">Actonel, also known as</span>Risedronate (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Actoplus Met –</span> <a href="/drugs-supplements/pioglitazone-and-metformin-oral-route/description/drg-20063126"><span class="myc-visuallyhidden">Actoplus Met, also known as</span>Pioglitazone And Metformin (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Actoplus Met XR –</span> <a href="/drugs-supplements/pioglitazone-and-metformin-oral-route/description/drg-20063126"><span class="myc-visuallyhidden">Actoplus Met XR, also known as</span>Pioglitazone And Metformin (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Actos –</span> <a href="/drugs-supplements/pioglitazone-oral-route/description/drg-20065503"><span class="myc-visuallyhidden">Actos, also known as</span>Pioglitazone (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acular –</span> <a href="/drugs-supplements/anti-inflammatory-drugs-nonsteroidal-ophthalmic-route/description/drg-20070403"><span class="myc-visuallyhidden">Acular, also known as</span>Anti-Inflammatory Drugs, Nonsteroidal (Ophthalmic Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acular –</span> <a href="/drugs-supplements/ketorolac-ophthalmic-route/description/drg-20064486"><span class="myc-visuallyhidden">Acular, also known as</span>Ketorolac (Ophthalmic Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acular LS –</span> <a href="/drugs-supplements/anti-inflammatory-drugs-nonsteroidal-ophthalmic-route/description/drg-20070403"><span class="myc-visuallyhidden">Acular LS, also known as</span>Anti-Inflammatory Drugs, Nonsteroidal (Ophthalmic Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acular LS –</span> <a href="/drugs-supplements/ketorolac-ophthalmic-route/description/drg-20064486"><span class="myc-visuallyhidden">Acular LS, also known as</span>Ketorolac (Ophthalmic Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acular PF –</span> <a href="/drugs-supplements/anti-inflammatory-drugs-nonsteroidal-ophthalmic-route/description/drg-20070403"><span class="myc-visuallyhidden">Acular PF, also known as</span>Anti-Inflammatory Drugs, Nonsteroidal (Ophthalmic Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Acular PF –</span> <a href="/drugs-supplements/ketorolac-ophthalmic-route/description/drg-20064486"><span class="myc-visuallyhidden">Acular PF, also known as</span>Ketorolac (Ophthalmic Route)</a>
+                
+            </li>
+        
+        
+          </ol>
+        </div>
+
+
+        <div id="desc-B" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">B</h3>
+          <ol>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Babee Cof Syrup –</span> <a href="/drugs-supplements/dextromethorphan-oral-route/description/drg-20068661"><span class="myc-visuallyhidden">Babee Cof Syrup, also known as</span>Dextromethorphan (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Babee Teething –</span> <a href="/drugs-supplements/benzocaine-oral-route-oromucosal-route/description/drg-20072824"><span class="myc-visuallyhidden">Babee Teething, also known as</span>Benzocaine (Oral Route, Oromucosal Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Baby Anbesol –</span> <a href="/drugs-supplements/benzocaine-oral-route-oromucosal-route/description/drg-20072824"><span class="myc-visuallyhidden">Baby Anbesol, also known as</span>Benzocaine (Oral Route, Oromucosal Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Baby Gasz –</span> <a href="/drugs-supplements/simethicone-oral-route/description/drg-20068838"><span class="myc-visuallyhidden">Baby Gasz, also known as</span>Simethicone (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Baby Orajel –</span> <a href="/drugs-supplements/benzocaine-oral-route-oromucosal-route/description/drg-20072824">Benzocaine (Oral Route, Oromucosal Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Baby Orajel Liquid –</span> <a href="/drugs-supplements/benzocaine-oral-route-oromucosal-route/description/drg-20072824">Benzocaine (Oral Route, Oromucosal Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Baby Orajel Nighttime Formula –</span> <a href="/drugs-supplements/anesthetic-local-topical-application-route/description/drg-20070024"><span class="myc-visuallyhidden">Baby Orajel Nighttime Formula, also known as</span>Anesthetic, Local (Topical Application Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Baby Orajel Nighttime Formula –</span> <a href="/drugs-supplements/benzocaine-topical-application-route/description/drg-20072913"><span class="myc-visuallyhidden">Baby Orajel Nighttime Formula, also known as</span>Benzocaine (Topical Application Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/bacillus-of-calmette-and-guerin-vaccine-live-intradermal-route/description/drg-20062177">Bacillus Of Calmette And Guerin Vaccine, Live (Intradermal Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/bacillus-of-calmette-and-guerin-vaccine-live-intravesical-route/description/drg-20062163">Bacillus Of Calmette And Guerin Vaccine, Live (Intravesical Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/bacitracin-and-polymyxin-b-ophthalmic-route/description/drg-20490784">Bacitracin And Polymyxin B (Ophthalmic Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/bacitracin-and-polymyxin-b-topical-application-route/description/drg-20492044">Bacitracin And Polymyxin B (Topical Application Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Backprin –</span> <a href="/drugs-supplements/analgesic-combination-acetaminophen-salicylate-oral-route/description/drg-20069948"><span class="myc-visuallyhidden">Backprin, also known as</span>Analgesic Combination, Acetaminophen/Salicylate (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/baclofen-intrathecal-route/description/drg-20062155">Baclofen (Intrathecal Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/baclofen-oral-route/description/drg-20067995">Baclofen (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Bactine –</span> <a href="/drugs-supplements/anesthetic-local-topical-application-route/description/drg-20070024"><span class="myc-visuallyhidden">Bactine, also known as</span>Anesthetic, Local (Topical Application Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Bactine First Aid –</span> <a href="/drugs-supplements/anesthetic-local-topical-application-route/description/drg-20070024"><span class="myc-visuallyhidden">Bactine First Aid, also known as</span>Anesthetic, Local (Topical Application Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Bactocill –</span> <a href="/drugs-supplements/penicillin-oral-route-injection-route-intravenous-route-intramuscular-route/description/drg-20062334"><span class="myc-visuallyhidden">Bactocill, also known as</span>Penicillin (Oral Route, Injection Route, Intravenous Route, Intramuscular Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Bactrim –</span> <a href="/drugs-supplements/sulfamethoxazole-and-trimethoprim-oral-route/description/drg-20071899"><span class="myc-visuallyhidden">Bactrim, also known as</span>Sulfamethoxazole And Trimethoprim (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Bactrim DS –</span> <a href="/drugs-supplements/sulfamethoxazole-and-trimethoprim-oral-route/description/drg-20071899"><span class="myc-visuallyhidden">Bactrim DS, also known as</span>Sulfamethoxazole And Trimethoprim (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Bactroban –</span> <a href="/drugs-supplements/mupirocin-nasal-route/description/drg-20064917"><span class="myc-visuallyhidden">Bactroban, also known as</span>Mupirocin (Nasal Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Bactroban –</span> <a href="/drugs-supplements/mupirocin-topical-route/description/drg-20064924"><span class="myc-visuallyhidden">Bactroban, also known as</span>Mupirocin (Topical Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Bafiertam –</span> <a href="/drugs-supplements/monomethyl-fumarate-oral-route/description/drg-20489606"><span class="myc-visuallyhidden">Bafiertam, also known as</span>Monomethyl Fumarate (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Balcoltra –</span> <a href="/drugs-supplements/levonorgestrel-ethinyl-estradiol-and-ferrous-bisglycinate-oral-route/description/drg-20406792"><span class="myc-visuallyhidden">Balcoltra, also known as</span>Levonorgestrel, Ethinyl Estradiol, And Ferrous Bisglycinate (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Balmex –</span> <a href="/drugs-supplements/sunscreen-agent-topical-application-route/description/drg-20070255"><span class="myc-visuallyhidden">Balmex, also known as</span>Sunscreen Agent (Topical Application Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Balmex –</span> <a href="/drugs-supplements/zinc-oxide-topical-application-route/description/drg-20075525"><span class="myc-visuallyhidden">Balmex, also known as</span>Zinc Oxide (Topical Application Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Balminil –</span> <a href="/drugs-supplements/cough-and-cold-combinations-oral-route/description/drg-20061164">Cough And Cold Combinations (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Balminil Dm Children –</span> <a href="/drugs-supplements/cough-and-cold-combinations-oral-route/description/drg-20061164">Cough And Cold Combinations (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Balminil Dm Sugar-Free –</span> <a href="/drugs-supplements/cough-and-cold-combinations-oral-route/description/drg-20061164">Cough And Cold Combinations (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Balminil Expectorant –</span> <a href="/drugs-supplements/cough-and-cold-combinations-oral-route/description/drg-20061164">Cough And Cold Combinations (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Balminil Expectorant –</span> <a href="/drugs-supplements/guaifenesin-oral-route/description/drg-20068720">Guaifenesin (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Balminil Expectorant Sugar-Free –</span> <a href="/drugs-supplements/cough-and-cold-combinations-oral-route/description/drg-20061164">Cough And Cold Combinations (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Balminil Expectorant Sugar-Free –</span> <a href="/drugs-supplements/guaifenesin-oral-route/description/drg-20068720">Guaifenesin (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Balminil With Sugar –</span> <a href="/drugs-supplements/cough-and-cold-combinations-oral-route/description/drg-20061164">Cough And Cold Combinations (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/baloxavir-marboxil-oral-route/description/drg-20452251">Baloxavir Marboxil (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/balsalazide-oral-route/description/drg-20062119">Balsalazide (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Balversa –</span> <a href="/drugs-supplements/erdafitinib-oral-route/description/drg-20461324"><span class="myc-visuallyhidden">Balversa, also known as</span>Erdafitinib (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Banzel –</span> <a href="/drugs-supplements/rufinamide-oral-route/description/drg-20072403"><span class="myc-visuallyhidden">Banzel, also known as</span>Rufinamide (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Baqsimi –</span> <a href="/drugs-supplements/glucagon-nasal-route/description/drg-20469984"><span class="myc-visuallyhidden">Baqsimi, also known as</span>Glucagon (Nasal Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Baraclude –</span> <a href="/drugs-supplements/entecavir-oral-route/description/drg-20063656"><span class="myc-visuallyhidden">Baraclude, also known as</span>Entecavir (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/barbiturate-oral-route-parenteral-route-rectal-route/description/drg-20069290">Barbiturate (Oral Route, Parenteral Route, Rectal Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/baricitinib-oral-route/description/drg-20487070">Baricitinib (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Baridium –</span> <a href="/drugs-supplements/phenazopyridine-oral-route/description/drg-20065473"><span class="myc-visuallyhidden">Baridium, also known as</span>Phenazopyridine (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/barium-sulfate-oral-route/description/drg-20062255">Barium Sulfate (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Baro-Cat –</span> <a href="/drugs-supplements/cholecystographic-agent-oral-route/description/drg-20070691"><span class="myc-visuallyhidden">Baro-Cat, also known as</span>Cholecystographic Agent (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Baro-Cat –</span> <a href="/drugs-supplements/barium-sulfate-oral-route/description/drg-20062255"><span class="myc-visuallyhidden">Baro-Cat, also known as</span>Barium Sulfate (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Barriere-Hc –</span> <a href="/drugs-supplements/hydrocortisone-probutate-topical-application-route/description/drg-20073749"><span class="myc-visuallyhidden">Barriere-Hc, also known as</span>Hydrocortisone Probutate (Topical Application Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Barriere-Hc –</span> <a href="/drugs-supplements/hydrocortisone-topical-application-route/description/drg-20073814"><span class="myc-visuallyhidden">Barriere-Hc, also known as</span>Hydrocortisone (Topical Application Route)</a>
+                
+            </li>
+          </ol>
+       </div>
+
+       <div id="desc-C" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">C</h3>
+        <ol>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/c1-esterase-inhibitor-recombinant-intravenous-route/description/drg-20110256">C1 Esterase Inhibitor Recombinant (Intravenous Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/c1-esterase-inhibitor-human-intravenous-route-subcutaneous-route/description/drg-20072383">C1 Esterase Inhibitor, Human (Intravenous Route, Subcutaneous Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">C-500 –</span> <a href="/drugs-supplements/ascorbic-acid-oral-route/description/drg-20068031"><span class="myc-visuallyhidden">C-500, also known as</span>Ascorbic Acid (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/cabazitaxel-intravenous-route/description/drg-20074343">Cabazitaxel (Intravenous Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/cabergoline-oral-route/description/drg-20062485">Cabergoline (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/cabotegravir-intramuscular-route/description/drg-20528258">Cabotegravir (Intramuscular Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/cabotegravir-oral-route/description/drg-20509570">Cabotegravir (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/cabotegravir-and-rilpivirine-intramuscular-route/description/drg-20509556">Cabotegravir And Rilpivirine (Intramuscular Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/cabozantinib-oral-route/description/drg-20060654">Cabozantinib (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Caduet –</span> <a href="/drugs-supplements/amlodipine-and-atorvastatin-oral-route/description/drg-20062902"><span class="myc-visuallyhidden">Caduet, also known as</span>Amlodipine And Atorvastatin (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Cafcit –</span> <a href="/drugs-supplements/caffeine-citrate-intravenous-route/description/drg-20137804"><span class="myc-visuallyhidden">Cafcit, also known as</span>Caffeine Citrate (Intravenous Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Cafcit –</span> <a href="/drugs-supplements/caffeine-oral-route/description/drg-20137844"><span class="myc-visuallyhidden">Cafcit, also known as</span>Caffeine (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Cafergot –</span> <a href="/drugs-supplements/headache-medicine-ergot-derivative-containing-oral-route-parenteral-route-rectal-route/description/drg-20070161">Headache Medicine Ergot-Derivative-Containing (Oral Route, Parenteral Route, Rectal Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Cafergot –</span> <a href="/drugs-supplements/ergotamine-and-caffeine-oral-route/description/drg-20528264">Ergotamine And Caffeine (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                <span aria-hidden="true" class="inline-link">Cafergot –</span> <a href="/drugs-supplements/ergotamine-and-caffeine-rectal-route/description/drg-20528276">Ergotamine And Caffeine (Rectal Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/caffeine-oral-route/description/drg-20137844">Caffeine (Oral Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/caffeine-and-sodium-benzoate-injection-route/description/drg-20075607">Caffeine And Sodium Benzoate (Injection Route)</a>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="/drugs-supplements/caffeine-citrate-intravenous-route/description/drg-20137804">Caffeine Citrate (Intravenous Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-D" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">D</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Dabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-E" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">E</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Eabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-F" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">F</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Fabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-G" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">G</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Gabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-H" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">H</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Habigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-I" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">I</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Iabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-J" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">J</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Jabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-K" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">K</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Kabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-L" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">L</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Labigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-M" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">M</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Mabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-N" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">N</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Nabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-O" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">O</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Oabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-P" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">P</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Pabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-Q" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">Q</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Qabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-R" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">R</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Rabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-S" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">S</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Sabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-T" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">T</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Tabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-U" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">U</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Uabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-V" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">V</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Vabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-W" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">W</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Wabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-X" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">X</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Xabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-Y" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">Y</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Yabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+        <div id="desc-Z" style="width: 75%; padding-left: 8rem;">
+        <h3 style="padding-left: 1rem; padding-top: 2rem; padding-bottom: 1rem;">Z</h3>
+          <ol>
+            <li>
+                
+                    <a href="/drugs-supplements/dabigatran-oral-route/description/drg-20074611">Zabigatran (Oral Route)</a>
+                
+            </li>
+          </ol>
+        </div>
+
+
+      </section>
+  
+  <!-- Footer -->
+  <footer id="footer">
+    <div class=foot-icons> <i class="fab fa-twitter footji"></i> <i class="fab fa-facebook-f footji"></i> <i class="fab fa-instagram footji"></i> <i class="fas fa-envelope footji"></i>
+      <p>© Copyright 2022 HPE CodeWars Hackathon</p>
+    </div>
+  </footer>
+</body>
+
+</html>

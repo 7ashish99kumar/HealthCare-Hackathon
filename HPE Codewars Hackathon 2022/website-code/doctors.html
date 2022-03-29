@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Doctors</title>
+  <!-- CSS stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Bootstrap for navigation bars -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  
+  <!-- Google Font Formatting -->
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&family=Ubuntu:ital,wght@1,500&display=swap" rel="stylesheet">
+  <!--Font Awesome Icon -apple and playstore-->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<!-- Inclusive Styling -->
+<style type="text/css">
+.hero-image {
+  background-image: url("images/doc2.jpg");
+  background-color: #cccccc;
+  height: 1500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.doctor-box-img {
+  height: 200px;
+  width: 300px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 350px;
+  height: 500px;
+  padding: 10px 10px 10px 10px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.par-card {
+  padding-right: 100px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 35px;
+  /*align-content: center;*/
+}
+</style>
+
+<body>
+  <section id="title" style="height: 200px;">
+    <div class="container-fluid" style="padding-right: 10%;padding-left: 15%;">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark" style="padding:0 0 0 0; "> <a class="navbar-brand" href="index.html" style="font-size:2.5rem; color:#085E7D;margin-right: 100px"><i class="fa fa-stethoscope" style="font-size: 55px"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"> <a class="nav-link" href="covidinfo.html" style="padding-left: 18px; padding-right: 18px; color:#085E7D">Covid-19 Updates</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="immunity.html" style="padding-left: 18px; padding-right: 18px; color:#085E7D">Increase Immunity</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="doctors.html" style="padding-left: 18px; padding-right: 18px; color:#085E7D">Find a Doctor</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="medicine.html" style="padding-left: 18px; padding-right: 18px;color:#085E7D">Know your Medicines</a> </li>
+            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#085E78">
+          Quick Enquiry
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: 300px;padding-left: 1rem; background-color: #35b6b4;">
+                <form action="#">
+                  <label for="fname" style="color: white;">Name</label>
+                  <br>
+                  <input type="text" id="name" name="Name">
+                  <br>
+                  <br>
+                  <label for="mobile" style="color: white;">Mobile Number</label>
+                  <br>
+                  <input type="tel" id="mob" name="mobile" pattern="[0-9]{10}">
+                  <br>
+                  <br>
+                  <label for="pref-time" style="color: white;">Preferred Time To Call</label>
+                  <br>
+                  <select id="time" name="time">
+                    <option value="t1">08:00 AM - 9:00 AM</option>
+                    <option value="t1">09:00 AM - 10:00 AM</option>
+                    <option value="t1">10:00 AM - 11:00 AM</option>
+                    <option value="t1">11:00 AM - 12:00 PM</option>
+                    <option value="t1">12:00 PM - 01:00 PM</option>
+                    <option value="t1">01:00 PM - 02:00 PM</option>
+                    <option value="t1">02:00 PM - 03:00 PM</option>
+                    <option value="t1">03:00 PM - 04:00 PM</option>
+                    <option value="t1">04:00 PM - 05:00 PM</option>
+                  </select>
+                  <br/>
+                  <br/>
+                  <input type="Submit" name="Submit" onclick="alert('Thank you ! Your response has been received.')" style="width: 90%; text-align: center;"> </form>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark" style="padding:0 30rem 4.5rem 0;">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown" style="padding-right: 40%;"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#3E8E7E">
+          Hospitals
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width:300px;background-color: #4FD3C4;">
+                <h5 style="padding-left: 1rem;color: white;">Our Hospital Partners</h5>
+                <div class="dropdown-divider"></div> <a class="dropdown-item" href="hospitals.html">Indraprastha Apollo Hospital</a> <a class="dropdown-item" href="hospitals.html">Medanta</a> <a class="dropdown-item" href="hospitals.html">Fortis Memorial Research Institute</a> <a class="dropdown-item" href="hospitals.html">MAX Super Speciality Hospitals</a> <a class="dropdown-item" href="hospitals.html">Jaypee Hospital, Noida</a>
+                <div class="dropdown-divider"></div> <a class="dropdown-item" href="hospitals.html" style="font-weight: bold;">Know In Detail</a> </div>
+            </li>
+            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#3E8E7E;">
+                Services
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: 650px; background-color: #35b6b4;color: white;">
+                <div class="megadropdown-container pt-lg-20 pb-lg-30" style="width: 500px;">
+                  <div class="row">
+                    <div class="col-lg-7 megadropdown-aux">
+                      <div class="row">
+                        <div class="col-6">
+                          <a class="d-flex align-items-start megadropdown-menu-link-o f-lg-18 color-gray-600 py-2 l-h-12 px-3" href="emergency.html" style="color: white;">
+                            <blink>Emergency</blink>
+                          </a>
+                        </div>
+                        <div class="col-6"><a class="d-flex align-items-start megadropdown-menu-link-o f-lg-18 color-gray-600 py-2 l-h-12 px-3" style="color: white;" href="http://maxlab.co.in/" target="_blank" rel="noopener"><span>Lab Tests</span></a> </div>
+                        <div class="col-6"><a class="d-flex align-items-start megadropdown-menu-link-o f-lg-18 color-gray-600 py-2 l-h-12 px-3" style="color: white;" href="/frequently-asked-questions"><span>Frequently Asked Questions</span></a> </div>
+                        <div class="col-6"><a class="d-flex align-items-start megadropdown-menu-link-o f-lg-18 color-gray-600 py-2 l-h-12 px-3" style="color: white;" href="http://maxathome.in/" target="_blank" rel="noopener"><span>Consult @ Home</span></a> </div>
+                        <div class="col-6"><a class="d-flex align-items-start megadropdown-menu-link-o f-lg-18 color-gray-600 py-2 l-h-12 px-3" style="color: white;" href="/immigration-services"><span>Immigration Services</span></a>
+                          <br> </div>
+                        <div class="col-6"><a class="d-flex align-items-start megadropdown-menu-link-o f-lg-18 color-gray-600 py-2 l-h-12 px-3" style="color: white;" href="/tpa-and-panel-information"><span>Insurance and TPA</span></a> </div>
+                        <div class="col-6">
+                          <br> </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-5 pl-lg-30 border-left megadropdown-aux">
+                      <div class="mb-lg-5">
+                        <div class="color-blue f-lg-22 mb-2 l-h-12 font-weight-semi-bold" style="padding-left:10px; background-color: #085E7D; width: 320px;font-weight: 800">
+                          <h4>At Home Service</h4> </div>
+                        <p class="color-gray-600 f-lg-16 mb-3 l-h-12" style="width: 250px;"><a>Now get expert medical care in the comfort of your home with healthCare@Home services.</a> </p>
+                        <button> <a class="btn-with-icon meet-doctor-section-btn f-lg-20 h-50p btn-with-icon-sm" href="http://maxathome.in/" target="_blank" rel="noopener">Book a Test</a></button>
+                      </div>
+                      <div>
+                        <div class="color-blue f-lg-22 mb-2 l-h-12 font-weight-semi-bold" style="padding-left:10px; background-color: #085E7D; width: 320px; font-weight: 800">
+                          <h4>Book a Health Checkup</h4></div>
+                        <p class="color-gray-600 f-lg-16 mb-3 l-h-12" style="width: 300px;">Preventive health checkups can provide you with an early diagnosis of medical conditions, giving your treatment a headstart.</p>
+                        <button class="btn-with-icon-sm btn-with-icon meet-doctor-section-btn f-lg-20 h-50p" href="/preventive-health-plans">Book Now </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Adding Doctors -->
+  <section class="hospital-section hero-image" style="background-color: #E4F9F5; height:1750px">
+    <div class="doctor-table" style="padding-left: 5rem;padding-right: 1rem;">
+      <table>
+        <tr class="par-row">
+          <td class="par-card">
+            <div class="card"> <img class="doctor-box-img doctor-box-img-lg flex-shrink-0" src="https://max-website20-images.s3.ap-south-1.amazonaws.com/Dr_Sandeep_Budhiraja_0_1_299a06ed04.jpeg" alt="Dr. Sandeep Budhiraja">
+              <div class="container">
+                <h3><b>Dr. Sandeep Budhiraja</b></h3>
+                <p class="f-14 f-lg-17 color-gray-600 mb-0"> Group Medical Director - Max Healthcare &amp; Senior Director - Institute of Internal Medicine </p>
+                <br/>
+                <p class="f-14 f-lg-17 color-gray-600 mb-3"> Internal Medicine </p>
+                <div class="doctor-box-footer px-10 pb-10 d-none d-lg-block"> <a class="d-flex align-items-center mb-lg-20 color-blue hover-no-underline hover-color-green f-base font-weight-semi-bold" href="https://www.maxhealthcare.in/doctor/dr-sandeep-budhiraja" target="_blank">
+                                View Full Profile
+                                <i class="ml-1 fas fa-chevron-right align-middle" aria-hidden="true"></i>
+                            </a> </div> <a class="d-block btn btn-primary font-weight-semi-bold" href="/book-an-appointment/doctor/dr-sandeep-budhiraja~~d35?reload=true">
+                                Book an Appointment
+                            </a> </div>
+            </div>
+          </td>
+          <td class="par-card">
+            <div class="card"> <img class="doctor-box-img doctor-box-img-lg flex-shrink-0" src="https://max-website20-images.s3.ap-south-1.amazonaws.com/Dr_Harit_Chaturvedi_new_0_5f2633c1ed.jpg" alt="Dr. Harit Chaturvedi">
+              <h3><b>Dr. Harit Chaturvedi</b></h3>
+              <p class="f-14 f-lg-17 color-gray-600 mb-0"> Chairman - Max Institute of Cancer Care </p>
+              <br/>
+              <p class="f-14 f-lg-17 color-gray-600 mb-3"> Cancer Care / Oncology, Thoracic Oncology, Surgical Oncology </p>
+              <div class="doctor-box-footer px-10 pb-10 d-none d-lg-block"> <a class="d-flex align-items-center mb-lg-20 color-blue hover-no-underline hover-color-green f-base font-weight-semi-bold" href="https://www.maxhealthcare.in/doctor/dr-sandeep-budhiraja">
+                                View Full Profile
+                                <i class="ml-1 fas fa-chevron-right align-middle" aria-hidden="true"></i>
+                            </a> </div> <a class="d-block btn btn-primary font-weight-semi-bold" href="/book-an-appointment/doctor/dr-sandeep-budhiraja~~d35?reload=true">
+                                Book an Appointment
+                            </a> </div>
+    </div>
+    </td>
+    <td class="par-card">
+      <div class="card"> <img class="doctor-box-img doctor-box-img-lg flex-shrink-0" src="https://max-website20-images.s3.ap-south-1.amazonaws.com/Dr_SG_da91d515bc.jpg" alt="Prof (Dr.) Subhash Gupta">
+        <div class="container">
+          <h3><b>Prof (Dr.) Subhash Gupta</b></h3>
+          <p class="f-14 f-lg-17 text-truncate-line-2 color-gray-600 mb-0"> Chairman - Centre for Liver &amp; Biliary Sciences </p>
+          <br/>
+          <p class="f-14 f-lg-17 text-truncate-line-2 color-gray-600 mb-3"> Liver Transplant and Biliary Sciences </p>
+          <div class="doctor-box-footer px-10 pb-10 d-none d-lg-block"> <a class="d-flex align-items-center mb-lg-20 color-blue hover-no-underline hover-color-green f-base font-weight-semi-bold" href="https://www.maxhealthcare.in/doctor/dr-sandeep-budhiraja">
+                                View Full Profile
+                                <i class="ml-1 fas fa-chevron-right align-middle" aria-hidden="true"></i>
+                            </a> </div> <a class="d-block btn btn-primary font-weight-semi-bold" href="/book-an-appointment/doctor/dr-sandeep-budhiraja~~d35?reload=true">
+                                Book an Appointment
+                            </a> </div>
+      </div>
+    </td>
+    </tr>
+    <tr class="par-row">
+      <td class="par-card">
+        <div class="card"> <img class="doctor-box-img doctor-box-img-lg flex-shrink-0" src="https://max-website20-images.s3.ap-south-1.amazonaws.com/IMG_20190423_WA_0005_5ed3fcaa9b.jpg" alt="Dr. Dinesh Khullar">
+          <div class="container">
+            <h3><b>Dr. Dinesh Khullar</b></h3>
+            <p class="f-14 f-lg-17 text-truncate-line-2 color-gray-600 mb-0"> Chairman - Nephrology &amp; Renal Transplant Medicine, Max Saket Complex </p>
+            <br/>
+            <p class="f-14 f-lg-17 text-truncate-line-2 color-gray-600 mb-3"> Kidney Transplant, Nephrology </p>
+            <div class="doctor-box-footer px-10 pb-10 d-none d-lg-block"> <a class="d-flex align-items-center mb-lg-20 color-blue hover-no-underline hover-color-green f-base font-weight-semi-bold" href="https://www.maxhealthcare.in/doctor/dr-sandeep-budhiraja">
+                                View Full Profile
+                                <i class="ml-1 fas fa-chevron-right align-middle" aria-hidden="true"></i>
+                            </a> </div> <a class="d-block btn btn-primary font-weight-semi-bold" href="/book-an-appointment/doctor/dr-sandeep-budhiraja~~d35?reload=true">
+                                Book an Appointment
+                            </a> </div>
+        </div>
+      </td>
+      <td class="par-card">
+        <div class="card"> <img class="doctor-box-img doctor-box-img-lg flex-shrink-0" src="https://max-website20-images.s3.ap-south-1.amazonaws.com/Dr_Anant_Kumar_new_picture_8602360343.jpg" alt="Dr. Anant Kumar">
+          <h3><b>Dr. Anant Kumar</b></h3>
+          <p class="f-14 f-lg-17 text-truncate-line-2 color-gray-600 mb-0"> Chairman - Urology Renal Transplant and Robotics of Max Saket Complex, Max Vaishali and Uro - Oncology of MSSH Saket </p>
+          <br/>
+          <p class="f-14 f-lg-17 text-truncate-line-2 color-gray-600 mb-3"> Urology, Kidney Transplant </p>
+          <div class="doctor-box-footer px-10 pb-10 d-none d-lg-block"> <a class="d-flex align-items-center mb-lg-20 color-blue hover-no-underline hover-color-green f-base font-weight-semi-bold" href="https://www.maxhealthcare.in/doctor/dr-sandeep-budhiraja">
+                                View Full Profile
+                                <i class="ml-1 fas fa-chevron-right align-middle" aria-hidden="true"></i>
+                            </a> </div> <a class="d-block btn btn-primary font-weight-semi-bold" href="/book-an-appointment/doctor/dr-sandeep-budhiraja~~d35?reload=true">
+                                Book an Appointment
+                            </a> </div>
+        </div>
+      </td>
+      <td class="par-card">
+        <div class="card"> <img class="doctor-box-img doctor-box-img-lg flex-shrink-0" src="https://max-website20-images.s3.ap-south-1.amazonaws.com/Dr_Ambrish_4b333d76bd.jpg" alt="Dr. Ambrish Mithal">
+          <div class="container">
+            <h3><b>Dr. Ambrish Mithal</b></h3>
+            <p class="f-14 f-lg-17 text-truncate-line-2 color-gray-600 mb-0"> Chairman &amp; Head - Endocrinology &amp; Diabetes </p>
+            <br/>
+            <p class="f-14 f-lg-17 text-truncate-line-2 color-gray-600 mb-3"> Endocrinology &amp; Diabetes </p>
+            <div class="doctor-box-footer px-10 pb-10 d-none d-lg-block"> <a class="d-flex align-items-center mb-lg-20 color-blue hover-no-underline hover-color-green f-base font-weight-semi-bold" href="https://www.maxhealthcare.in/doctor/dr-sandeep-budhiraja">
+                                View Full Profile
+                                <i class="ml-1 fas fa-chevron-right align-middle" aria-hidden="true"></i>
+                            </a> </div> <a class="d-block btn btn-primary font-weight-semi-bold" href="/book-an-appointment/doctor/dr-sandeep-budhiraja~~d35?reload=true">
+                                Book an Appointment
+                            </a> </div>
+        </div>
+      </td>
+    </tr>
+    <tr class="par-row">
+      <td class="par-card">
+        <div class="card"> <img class="doctor-box-img doctor-box-img-lg flex-shrink-0" src="https://max-website20-images.s3.ap-south-1.amazonaws.com/Dr_A_K_Singh_Director_MI_c2d6e39883.jpg" alt="Dr. A.K. Singh">
+          <div class="container">
+            <h3><b>Dr. A.K. Singh</b></h3>
+            <p class="f-14 f-lg-17 text-truncate-line-2 color-gray-600 mb-0"> Chairman &amp; Head - MIND (Max Institute of Neurosciences) </p>
+            <br/>
+            <p class="f-14 f-lg-17 text-truncate-line-2 color-gray-600 mb-3"> Neurosciences, Neurosurgery </p>
+            <div class="doctor-box-footer px-10 pb-10 d-none d-lg-block"> <a class="d-flex align-items-center mb-lg-20 color-blue hover-no-underline hover-color-green f-base font-weight-semi-bold" href="https://www.maxhealthcare.in/doctor/dr-sandeep-budhiraja">
+                                View Full Profile
+                                <i class="ml-1 fas fa-chevron-right align-middle" aria-hidden="true"></i>
+                            </a> </div> <a class="d-block btn btn-primary font-weight-semi-bold" href="/book-an-appointment/doctor/dr-sandeep-budhiraja~~d35?reload=true">
+                                Book an Appointment
+                            </a> </div>
+        </div>
+      </td>
+      <td class="par-card">
+        <div class="card"> <img class="doctor-box-img doctor-box-img-lg flex-shrink-0" src="https://max-website20-images.s3.ap-south-1.amazonaws.com/Dr_Balbir_singh_a6647a13b9.jpg" alt="Dr. Balbir Singh">
+          <h3><b>Dr. Balbir Singh</b></h3>
+          <p class="f-14 f-lg-17 text-truncate-line-2 color-gray-600 mb-0"> Chairman - Cardiac Sciences </p>
+          <br/>
+          <p class="f-14 f-lg-17 text-truncate-line-2 color-gray-600 mb-3"> Cardiac Sciences, Cardiology </p>
+          <div class="doctor-box-footer px-10 pb-10 d-none d-lg-block"> <a class="d-flex align-items-center mb-lg-20 color-blue hover-no-underline hover-color-green f-base font-weight-semi-bold" href="https://www.maxhealthcare.in/doctor/dr-sandeep-budhiraja">
+                                View Full Profile
+                                <i class="ml-1 fas fa-chevron-right align-middle" aria-hidden="true"></i>
+                            </a> </div> <a class="d-block btn btn-primary font-weight-semi-bold" href="/book-an-appointment/doctor/dr-sandeep-budhiraja~~d35?reload=true">
+                                Book an Appointment
+                            </a> </div>
+        </div>
+      </td>
+      <td class="par-card">
+        <div class="card"> <img class="doctor-box-img doctor-box-img-lg flex-shrink-0" src="https://max-website20-images.s3.ap-south-1.amazonaws.com/Dr_Anurag_Krishna_5af9ccc16f.jpg" alt="Dr. Anurag Krishna">
+          <h3><b>Dr. Anurag Krishna</b></h3>
+          <p class="f-14 f-lg-17 text-truncate-line-2 color-gray-600 mb-0"> Chairman - Paediatrics &amp; Paediatric Surgery </p>
+          <br/>
+          <p class="f-14 f-lg-17 text-truncate-line-2 color-gray-600 mb-3"> Paediatric (Ped), Paediatric (Ped) Surgery , Paediatric (Ped) Urology </p>
+          <div class="doctor-box-footer px-10 pb-10 d-none d-lg-block"> <a class="d-flex align-items-center mb-lg-20 color-blue hover-no-underline hover-color-green f-base font-weight-semi-bold" href="https://www.maxhealthcare.in/doctor/dr-sandeep-budhiraja">
+                                View Full Profile
+                                <i class="ml-1 fas fa-chevron-right align-middle" aria-hidden="true"></i>
+                            </a> </div> <a class="d-block btn btn-primary font-weight-semi-bold" href="/book-an-appointment/doctor/dr-sandeep-budhiraja~~d35?reload=true">
+                                Book an Appointment
+                            </a> </div>
+        </div>
+      </td>
+    </tr>
+    </table>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer id="footer">
+    <div class=foot-icons> <i class="fab fa-twitter footji"></i> <i class="fab fa-facebook-f footji"></i> <i class="fab fa-instagram footji"></i> <i class="fas fa-envelope footji"></i>
+      <p>© Copyright 2022 HPE CodeWars Hackathon</p>
+    </div>
+  </footer>
+</body>
+
+</html>
